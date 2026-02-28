@@ -9,12 +9,16 @@ source as (
 renamed as (
 
     select
-        id,
+        id as customer_id,
         first_name,
-        last_name
+        last_name,
+        concat(first_name, ' ', last_name) as full_name
 
     from source
 
 )
 
-select * from renamed
+-- select * from renamed
+select first_name, count(distinct(`first_name`)) as count 
+from renamed
+group by first_name
