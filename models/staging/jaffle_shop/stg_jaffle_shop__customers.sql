@@ -18,7 +18,7 @@ renamed as (
 
 )
 
--- select * from renamed
-select first_name, count(distinct(`first_name`)) as count 
-from renamed
-group by first_name
+select * from renamed
+-- select first_name, count(distinct(`first_name`)) as count 
+-- from renamed
+-- group by first_name
